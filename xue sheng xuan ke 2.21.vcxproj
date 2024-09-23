@@ -34,6 +34,7 @@
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Operation.cpp" />
     <ClCompile Include="Student.cpp" />
+    <ClCompile Include="Tcp.cpp" />
     <ClCompile Include="Teacher.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

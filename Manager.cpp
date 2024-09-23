@@ -397,7 +397,8 @@ void Manager::displaycourse(int a)
             {
                 c[i].displaystudent();
             }
-        }cout << "----------------------------------------------------------------------------------------------" << endl;
+        }
+        cout << "----------------------------------------------------------------------------------------------" << endl;
     }
 
 }
@@ -549,9 +550,10 @@ void Manager::save3()//保存老师
     outfile << endl << "-1" << endl;
     outfile.close(); system("cls");
 }
-void Manager::menudisplay1()
+void Manager::menudisplay1()//主界面
 {
     cout << "*******************************************" << endl;
+    cout << "               尊敬的管理员              " << endl;
     cout << "             欢迎使用选课系统              " << endl;
     cout << " 0:              退出                      " << endl;
     cout << " 1:              课程管理                  " << endl;
@@ -560,7 +562,7 @@ void Manager::menudisplay1()
     cout << "*******************************************" << endl;
     return;
 }
-void Manager::menudisplay2(int a)
+void Manager::menudisplay2(int a)//子界面
 {
     cout << "*******************************************" << endl;
 
@@ -625,21 +627,21 @@ void Manager::menu2(int a)
             if (!x) break;
             switch (x)
             {
-            case 1:
-                addcourse();//增加课程
-                break;
-            case 2:
-                deletecourse();//删除课程
-                break;
-            case 3:
-                chargecourse();//修改课程
-                break;
-            case 4:
-                querycourse();//查询课程
-                break;
-            case 5:
-                displaycourse(1);//展示所有课程及选课结果
-                break;
+                case 1:
+                    addcourse();//增加课程
+                    break;
+                case 2:
+                    deletecourse();//删除课程
+                    break;
+                case 3:
+                    chargecourse();//修改课程
+                    break;
+                case 4:
+                    querycourse();//查询课程
+                    break;
+                case 5:
+                    displaycourse(1);//展示所有课程及选课结果
+                    break;
             }
             system("pause");
             system("cls");
@@ -1057,14 +1059,14 @@ void Manager::Login_manager()
     while (1)
     {
         char temp[20];
-        while (1)
+        while (1)//检测账号
         {
             system("cls");
-            cout << "请输入尊贵的管理员账号" << endl;
+            cout << "请输入尊贵的管理员账号(8个8)" << endl;
             cin >> temp;
             if (strcmp("88888888", temp) == 0)
             {
-                cout << "请输入登陆密码" << endl;
+                cout << "请输入登陆密码(一样)" << endl;
                 break;
             }
             else
@@ -1072,7 +1074,7 @@ void Manager::Login_manager()
                 cout << "账号错误,请重新输入" << endl;
             }
         }
-        while (1)
+        while (1)//检测密码
         {
             cin >> temp;
             if (strcmp("88888888", temp) == 0)
